@@ -10,7 +10,6 @@ os.makedirs(output_folder, exist_ok=True)
 img = cv2.imread(input_image)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-# Remove left margin containing numbers
 h, w = gray.shape
 gray = gray[:, int(w*0.15):]
 
@@ -18,7 +17,7 @@ gray = gray[:, int(w*0.15):]
 _, binary = cv2.threshold(gray, 0, 255,
                           cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
-# Horizontal projection
+
 projection = np.sum(binary, axis=1)
 
 rows = []
