@@ -1,0 +1,6 @@
+numpy
+opencv-python
+mtcnn
+keras-facenet
+scikit-learn
+joblib
