@@ -42,4 +42,4 @@ for person_name in os.listdir(dataset_dir):
         known_names.append(person_name)
 
 np.savez(output_path, embeddings=known_embeddings, names=known_names)
-print(f"✅ Saved embeddings for {len(known_names)} faces → {output_path}")
+print(f"Saved embeddings for {len(known_names)} faces → {output_path}")
